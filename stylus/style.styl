@@ -33,7 +33,7 @@ red = #D02400
   =                 HEADER                      =    
   ===============================================*/
 .Header
-	background-color rgba(0,0,0,.6)
+	background-color rgba(0,0,0,.5)
 	color white
 	padding .2em
 	position fixed
@@ -57,16 +57,22 @@ red = #D02400
 			color white
 			font-size .9em
 			text-decoration none
+			transition color .5s
 			&:hover
-				text-decoration underline
+				color red
 	&__searcher
-		color black
+		color white
 		text-align right		
 		width 25%
 		input
+			background-color rgba(255,255,255,.2)
+			border none
 			font-size .9em
 			padding .2em
 			text-transform uppercase
+			
+			&:focus
+				border none
 	&__logo		
 	&__menu
 	&__searcher
@@ -97,6 +103,6 @@ red = #D02400
 
 .prueba
 	background-color #D02400
-	height 1500px	
+	height 600px	
 	width 100%
 	
