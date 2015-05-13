@@ -25,15 +25,16 @@ video
 /*===============================================
   =                 COLORS                      =    
   ===============================================*/
-white = #f9f9f9 
+black = #212121
+concrete = #95a5a6
 red = #D02400 
-
+white = #fdfdfd
 
 /*===============================================
   =                 HEADER                      =    
   ===============================================*/
 .Header
-	background-color rgba(0,0,0,.5)
+	background-color rgba(0,0,0,.6)
 	color white
 	padding .2em
 	position fixed
@@ -51,15 +52,16 @@ red = #D02400
 		width 50%
 		ul 
 			display flex
-			justify-content space-between
+			justify-content flex-start
 			list-style none
 		a		
 			color white
 			font-size .9em
+			padding 1em	
 			text-decoration none
-			transition color .5s
+			transition all .5s
 			&:hover
-				color red
+				background-color rgba(0,0,0,.5)
 	&__searcher
 		color white
 		text-align right		
@@ -82,27 +84,91 @@ red = #D02400
 		text-transform uppercase
 /*===============================================
   =              UTILITIES                      =    
-  ===============================================*/		
-.u-black
-	background-color black
-	color white
-	padding-left .2em
-	padding-right .2em 
-	
-.u-container
-	margin 0 auto
-	max-width 1200px
-	width 80% 			
-	
-.u-red
-	background-color red
-	color white	
-	padding-left .2em
-	padding-right .2em 
-	
+  ===============================================*/	
+  	
+.u
+	&-black
+		background-color black
+		color white
+		padding-left .2em
+		padding-right .2em 
+
+	&-button
+		color red
+		font-weight 300
+		font-size .7em
+		text-decoration none
+		&:hover
+			text-decoration underline
+
+	&-col3
+		box-sizing border-box
+		flex 0 1 33.3333333333%
+		margin-bottom 2em
+		order 0
+		padding .5em
+		text-align center
+
+	&-container
+		margin 0 auto
+		max-width 1200px
+		width 80% 			
+	&-flexbox
+		display flex
+		flex-flow row wrap
+		margin-bottom 2em
+		width 100%		
+	&-red
+		background-color red
+		color white	
+		padding-left .2em
+		padding-right .2em 
+	&-text
+		font-size 1.1em
+		color concrete
+		
+	&-title
+		font-size 2.5em 
+		font-weight 300
+		&:after
+			content ""
+			display block
+			margin 10px 0
+			width 100px 
+			height 5px
+			background-color red
+		&W
+			color white
+			&:after
+				content "" 
+				display block
+				margin 10px 0
+				width 100px 
+				height 5px
+				background-color black
+				
+	//shared property
+	&-button
+	&-subtitle
+		text-transform uppercase
 
 .prueba
 	background-color #D02400
-	height 600px	
+	height 700px	
 	width 100%
 	
+
+/*===============================================
+  =              SERVICES                       =    
+  ===============================================*/		
+.Services
+	background-color white
+	color black
+	padding .5em
+
+/*===============================================
+  =              SERVICES                       =    
+  ===============================================*/	
+.Products
+	background-color red  	
+	padding-top .5em
