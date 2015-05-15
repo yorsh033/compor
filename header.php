@@ -19,6 +19,12 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.7/jquery.smoove.min.js"></script>
+        <script src="<?php echo get_stylesheet_directory_uri();?>/js/main.js"></script>
+        
+    <?php wp_head(); ?>    
     </head>
     <body>
         <header class="Header">
@@ -31,13 +37,6 @@
                 </div>
                 <nav class="Header__menu">
                     <?php wp_nav_menu(array('menu'=>'Main'));?>
-                    <!-- <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a href="#">Acerca de</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul> -->
                 </nav>
                 <div class="Header__searcher">
                     <input type="search" placeholder="Search"/>

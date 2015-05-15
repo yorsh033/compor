@@ -21,6 +21,70 @@ video {
   =                 COLORS                      =    
   ===============================================*/
 /*===============================================
+  =                  CONTACT                    =    
+  ===============================================*/
+.Contact {
+  background-image: url("img/1.jpg");
+  background-position: 25%;
+  padding-top: 0.2em;
+}
+.Contact-email,
+.Contact-name,
+.Contact-message,
+.Contact-send,
+.Contact-subject {
+  background-color: rgba(255,255,255,0.4);
+  border: none;
+  border: 1px;
+  border-color: #d02400;
+  box-sizing: border-box;
+  color: #212121;
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+.Contact-name {
+  margin-right: 2%;
+}
+.Contact-name,
+.Contact-email {
+  flex: 0 1 49%;
+  order: 1;
+}
+.Contact-subject {
+  flex: 0 1 100%;
+  order: 2;
+}
+.Contact-message {
+  flex: 0 1 100%;
+  order: 3;
+  resize: none;
+}
+.Contact-send {
+  background-color: #d02400;
+  border: 1px solid transparent;
+  color: #fdfdfd;
+  margin: 0 auto;
+  order: 4;
+  padding: 0.5em 2em;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+.Contact-send:hover {
+  border: 1px solid #212121;
+  color: #212121;
+}
+/*===============================================
+  =                 FOOTER                      =    
+  ===============================================*/
+.Footer {
+  background-color: #111;
+  color: #fdfdfd;
+  height: 200px;
+  padding: 0.5em;
+  text-align: center;
+}
+/*===============================================
   =                 HEADER                      =    
   ===============================================*/
 .Header {
@@ -29,6 +93,7 @@ video {
   padding: 0.2em;
   position: fixed;
   width: 100%;
+  z-index: 4;
 }
 .Header__logo {
   min-width: 152px;
@@ -107,6 +172,32 @@ video {
   padding: 0.5em;
   text-align: center;
 }
+.u-col3 figure {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+.u-col3 figure:hover figcaption {
+  opacity: 1;
+  bottom: 0;
+}
+.u-col3 img {
+  transition: transform 0.5s;
+}
+.u-col3 a:hover img {
+  transform: scale(1.1);
+}
+.u-col3 figcaption {
+  background-color: rgba(0,0,0,0.7);
+  bottom: -100px;
+  color: #fdfdfd;
+  left: 0;
+  opacity: 0.2;
+  padding: 0.2em;
+  position: absolute;
+  right: 0;
+  transition: all 0.5s ease;
+}
 .u-container {
   margin: 0 auto;
   max-width: 1200px;
@@ -115,7 +206,7 @@ video {
 .u-flexbox {
   display: flex;
   flex-flow: row wrap;
-  margin-bottom: 2em;
+  padding-bottom: 2em;
   width: 100%;
 }
 .u-red {
@@ -123,6 +214,9 @@ video {
   color: #fdfdfd;
   padding-left: 0.2em;
   padding-right: 0.2em;
+}
+.u-subtitleW {
+  color: #fdfdfd;
 }
 .u-text {
   font-size: 1.1em;
@@ -152,6 +246,7 @@ video {
   background-color: #212121;
 }
 .u-button,
+.u-title,
 .u-subtitle {
   text-transform: uppercase;
 }
@@ -174,4 +269,7 @@ video {
 .Products {
   background-color: #d02400;
   padding-top: 0.5em;
+}
+.w {
+  position: relative;
 }

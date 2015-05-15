@@ -28,17 +28,78 @@ video
 black = #212121
 concrete = #95a5a6
 red = #D02400 
+//red = #DE4F4F
 white = #fdfdfd
 
 /*===============================================
+  =                  CONTACT                    =    
+  ===============================================*/	
+.Contact 
+	background-image url(img/1.jpg)
+	background-position 25%
+	padding-top .2em
+	
+	&-email
+	&-name
+	&-message
+	&-send				 	
+	&-subject
+		background-color rgba(255,255,255,.4)
+		border none
+		border 1px 
+		border-color red
+		box-sizing border-box 
+		color black
+		font-size 1.5em
+		margin .5em 0
+		padding .5em
+	&-name
+		margin-right 2%
+	&-name
+	&-email	
+		flex 0 1 49%
+		order 1	
+	&-subject
+		flex 0 1 100%
+		order 2	
+	&-message
+		flex 0 1 100%
+		order 3	
+		resize none
+	&-send
+		background-color red
+		border 1px solid transparent
+		color white
+		margin 0 auto
+		order 4
+		padding .5em 2em
+		text-transform uppercase
+		transition all .5s
+		&:hover
+			border 1px solid black
+			color black
+
+/*===============================================
+  =                 FOOTER                      =    
+  ===============================================*/
+.Footer
+	background-color #111111
+	color white
+	height 200px
+	padding .5em
+	text-align center
+/*===============================================
   =                 HEADER                      =    
   ===============================================*/
+  
+
 .Header
 	background-color rgba(0,0,0,.6)
 	color white
 	padding .2em
 	position fixed
 	width 100%
+	z-index 4
 	&__logo
 		min-width 152px 
 		text-align center
@@ -60,6 +121,7 @@ white = #fdfdfd
 			padding 1em	
 			text-decoration none
 			transition all .5s
+			
 			&:hover
 				background-color rgba(0,0,0,.5)
 	&__searcher
@@ -108,6 +170,32 @@ white = #fdfdfd
 		order 0
 		padding .5em
 		text-align center
+		figure
+			margin 0
+			overflow hidden
+			position relative
+			&:hover
+				figcaption
+					opacity 1
+					bottom 0
+		img
+			transition transform .5s
+		a
+			&:hover		
+				img
+					transform scale(1.1)
+					
+		figcaption
+			background-color rgba(0,0,0,.7)
+			bottom -100px
+			color white
+			left 0
+			opacity .2
+			padding .2em
+			position absolute
+			right 0
+			transition all .5s ease
+					
 
 	&-container
 		margin 0 auto
@@ -116,13 +204,16 @@ white = #fdfdfd
 	&-flexbox
 		display flex
 		flex-flow row wrap
-		margin-bottom 2em
+		padding-bottom 2em
 		width 100%		
 	&-red
 		background-color red
 		color white	
 		padding-left .2em
 		padding-right .2em 
+	&-subtitle
+		&W
+			color white	
 	&-text
 		font-size 1.1em
 		color concrete
@@ -149,6 +240,7 @@ white = #fdfdfd
 				
 	//shared property
 	&-button
+	&-title	
 	&-subtitle
 		text-transform uppercase
 
@@ -172,3 +264,6 @@ white = #fdfdfd
 .Products
 	background-color red  	
 	padding-top .5em
+
+.w
+	position relative	
