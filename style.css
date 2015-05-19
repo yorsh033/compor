@@ -8,6 +8,16 @@ Tags:ComporSolutions, ComporSolutions Theme
 Author URL:http://twitter.com/yorsh033
 */
 /*===============================================
+  =                              =    
+  ===============================================*/
+@font-face {
+  font-family: 'compor';
+  src: url("fonts/compor/fonts/compor.eot?-cse6fv");
+  src: url("fonts/compor/fonts/compor.eot?#iefix-cse6fv") format('embedded-opentype'), url("fonts/compor/fonts/compor.woff?-cse6fv") format('woff'), url("fonts/compor/fonts/compor.ttf?-cse6fv") format('truetype'), url("fonts/compor/fonts/compor.svg?-cse6fv#compor") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*===============================================
   =       DEFAULT STYLES                        =    
   ===============================================*/
 body {
@@ -25,7 +35,9 @@ video {
   ===============================================*/
 .Contact {
   background-image: url("img/1.jpg");
-  background-position: 25%;
+  background-position: 19%;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 0.2em;
 }
 .Contact-email,
@@ -33,6 +45,7 @@ video {
 .Contact-message,
 .Contact-send,
 .Contact-subject {
+  apeareance: none;
   background-color: rgba(255,255,255,0.4);
   border: none;
   border: 1px;
@@ -63,10 +76,11 @@ video {
 .Contact-send {
   background-color: #d02400;
   border: 1px solid transparent;
-  color: #fdfdfd;
+  color: #ecf0f1;
   margin: 0 auto;
   order: 4;
   padding: 0.5em 2em;
+  position: relative;
   text-transform: uppercase;
   transition: all 0.5s;
 }
@@ -74,12 +88,17 @@ video {
   border: 1px solid #212121;
   color: #212121;
 }
+.Contact-send:after {
+  color: #ecf0f1;
+  content: "asdas";
+  position: absolute;
+}
 /*===============================================
   =                 FOOTER                      =    
   ===============================================*/
 .Footer {
   background-color: #111;
-  color: #fdfdfd;
+  color: #ecf0f1;
   height: 200px;
   padding: 0.5em;
   text-align: center;
@@ -88,8 +107,8 @@ video {
   =                 HEADER                      =    
   ===============================================*/
 .Header {
-  background-color: rgba(0,0,0,0.6);
-  color: #fdfdfd;
+  background-color: rgba(0,0,0,0.8);
+  color: #ecf0f1;
   padding: 0.2em;
   position: fixed;
   width: 100%;
@@ -114,7 +133,7 @@ video {
   list-style: none;
 }
 .Header__menu a {
-  color: #fdfdfd;
+  color: #ecf0f1;
   font-size: 0.9em;
   padding: 1em;
   text-decoration: none;
@@ -124,7 +143,7 @@ video {
   background-color: rgba(0,0,0,0.5);
 }
 .Header__searcher {
-  color: #fdfdfd;
+  color: #ecf0f1;
   text-align: right;
   width: 25%;
 }
@@ -147,22 +166,63 @@ video {
   text-transform: uppercase;
 }
 /*===============================================
+  =              ICONS                          =    
+  ===============================================*/
+.Icon {
+  background-color: #d02400;
+  border: 5px solid #b32001;
+  border-radius: 50%;
+  color: #ecf0f1;
+  display: block;
+  font-family: "compor";
+  font-size: 4em;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  padding: 0.3em;
+  width: 100px;
+}
+.Icon-webDevelopment:before {
+  content: "\e994";
+}
+.Icon-network:before {
+  content: "\e9c9";
+}
+.Icon-graficDesign:before {
+  content: "\e604";
+}
+.Icon-MarketingDigital:before {
+  content: "\e91a";
+}
+.Icon-ComputerSistems:before {
+  content: "\e956";
+}
+.Icon-mobileApps:before {
+  content: "\e958";
+}
+/*===============================================
   =              UTILITIES                      =    
   ===============================================*/
 .u-black {
-  background-color: #212121;
-  color: #fdfdfd;
+  color: #ecf0f1;
+  font-weight: bold;
   padding-left: 0.2em;
   padding-right: 0.2em;
 }
+.u-boxS {
+  background-color: #c0392b;
+}
 .u-button {
   color: #d02400;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 0.7em;
   text-decoration: none;
 }
 .u-button:hover {
   text-decoration: underline;
+}
+.u-buttonW {
+  color: #ecf0f1;
 }
 .u-col3 {
   box-sizing: border-box;
@@ -190,7 +250,7 @@ video {
 .u-col3 figcaption {
   background-color: rgba(0,0,0,0.7);
   bottom: -100px;
-  color: #fdfdfd;
+  color: #ecf0f1;
   left: 0;
   opacity: 0.2;
   padding: 0.2em;
@@ -203,6 +263,27 @@ video {
   max-width: 1200px;
   width: 80%;
 }
+.u-contactanos {
+  border-radius: 0.2em;
+  border: 5px solid #d02400;
+  border-bottom: 5px solid #a01c00;
+  color: #d02400;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.5s;
+}
+.u-contactanos:hover {
+  background-color: #d02400;
+  color: #ecf0f1;
+}
+.u-content,
+.u-image {
+  flex: 0 1 50%;
+}
 .u-flexbox {
   display: flex;
   flex-flow: row wrap;
@@ -211,16 +292,25 @@ video {
 }
 .u-red {
   background-color: #d02400;
-  color: #fdfdfd;
+  color: #ecf0f1;
   padding-left: 0.2em;
   padding-right: 0.2em;
 }
 .u-subtitleW {
-  color: #fdfdfd;
+  color: #ecf0f1;
+}
+.u-subtitleR {
+  color: #d02400;
 }
 .u-text {
   font-size: 1.1em;
   color: #95a5a6;
+}
+.u-textB {
+  font-size: 2em;
+}
+.u-textW {
+  color: #ecf0f1;
 }
 .u-title {
   font-size: 2.5em;
@@ -235,7 +325,7 @@ video {
   background-color: #d02400;
 }
 .u-titleW {
-  color: #fdfdfd;
+  color: #ecf0f1;
 }
 .u-titleW:after {
   content: "";
@@ -253,22 +343,32 @@ video {
 .prueba {
   background-color: #d02400;
   height: 700px;
+  overflow: hidden;
   width: 100%;
 }
 /*===============================================
   =              SERVICES                       =    
   ===============================================*/
 .Services {
-  background-color: #fdfdfd;
   color: #212121;
   padding: 0.5em;
+}
+/*===============================================
+  =             SLIDESHOW                    =    
+  ===============================================*/
+.Slideshow {
+  height: 680px;
+  overflow: hidden;
 }
 /*===============================================
   =              SERVICES                       =    
   ===============================================*/
 .Products {
-  background-color: #d02400;
   padding-top: 0.5em;
+}
+.Products-landing {
+  background-color: #e25041;
+  padding: 0.1em;
 }
 .w {
   position: relative;
