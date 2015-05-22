@@ -22,6 +22,7 @@ Author URL:http://twitter.com/yorsh033
   ===============================================*/
 body {
   font-size: 16px;
+  font-family: 'Raleway', sans-serif;
 }
 img,
 video {
@@ -49,9 +50,9 @@ video {
   background-color: rgba(255,255,255,0.4);
   border: none;
   border: 1px;
-  border-color: #d02400;
+  border-color: #d70202;
   box-sizing: border-box;
-  color: #212121;
+  color: #191818;
   font-size: 1.5em;
   margin: 0.5em 0;
   padding: 0.5em;
@@ -74,7 +75,7 @@ video {
   resize: none;
 }
 .Contact-send {
-  background-color: #d02400;
+  background-color: #d70202;
   border: 1px solid transparent;
   color: #ecf0f1;
   margin: 0 auto;
@@ -85,8 +86,8 @@ video {
   transition: all 0.5s;
 }
 .Contact-send:hover {
-  border: 1px solid #212121;
-  color: #212121;
+  border: 1px solid #191818;
+  color: #191818;
 }
 .Contact-send:after {
   color: #ecf0f1;
@@ -99,15 +100,27 @@ video {
 .Footer {
   background-color: #111;
   color: #ecf0f1;
-  height: 200px;
   padding: 0.5em;
   text-align: center;
+}
+.Footer ul {
+  padding: 0;
+}
+.Footer li {
+  list-style: none;
+}
+.Footer a {
+  text-decoration: none;
+  color: #95a5a6;
+}
+.Footer-socialMedia li {
+  display: inline-block;
 }
 /*===============================================
   =                 HEADER                      =    
   ===============================================*/
 .Header {
-  background-color: rgba(0,0,0,0.8);
+  background-color: #191818;
   color: #ecf0f1;
   padding: 0.2em;
   position: fixed;
@@ -126,6 +139,10 @@ video {
 }
 .Header__menu {
   width: 50%;
+}
+.Header__menu .current-menu-item a {
+  background-color: #d70202;
+  border-radius: 0.3em;
 }
 .Header__menu ul {
   display: flex;
@@ -169,18 +186,17 @@ video {
   =              ICONS                          =    
   ===============================================*/
 .Icon {
-  background-color: #d02400;
-  border: 5px solid #b32001;
-  border-radius: 50%;
+  background-color: #d70202;
+  border-radius: 0.1em;
   color: #ecf0f1;
   display: block;
   font-family: "compor";
   font-size: 4em;
-  height: 100px;
-  line-height: 100px;
+  height: 90px;
+  line-height: 90px;
   margin: 0 auto;
   padding: 0.3em;
-  width: 100px;
+  width: 90px;
 }
 .Icon-webDevelopment:before {
   content: "\e994";
@@ -200,6 +216,31 @@ video {
 .Icon-mobileApps:before {
   content: "\e958";
 }
+.Icon-facebook,
+.Icon-twitter,
+.Icon-skype {
+  color: #ecf0f1;
+  font-size: 2em;
+  height: 40px;
+  line-height: 40px;
+  transition: all 0.5s;
+  width: 40px;
+}
+.Icon-facebook:hover,
+.Icon-twitter:hover,
+.Icon-skype:hover {
+  color: #191818;
+  background-color: #ecf0f1;
+}
+.Icon-facebook:before {
+  content: "\ea8c";
+}
+.Icon-twitter:before {
+  content: "\ea91";
+}
+.Icon-skype:before {
+  content: "\eac6";
+}
 /*===============================================
   =              UTILITIES                      =    
   ===============================================*/
@@ -210,10 +251,10 @@ video {
   padding-right: 0.2em;
 }
 .u-boxS {
-  background-color: #c0392b;
+  background-color: #ca1f1b;
 }
 .u-button {
-  color: #d02400;
+  color: #d70202;
   font-weight: bold;
   font-size: 0.7em;
   text-decoration: none;
@@ -265,48 +306,80 @@ video {
 }
 .u-contactanos {
   border-radius: 0.2em;
-  border: 5px solid #d02400;
+  border: 5px solid #d70202;
   border-bottom: 5px solid #a01c00;
-  color: #d02400;
+  color: #d70202;
   font-size: 1.2em;
   font-weight: bold;
-  margin: 0 auto;
+  margin: 0.5em auto;
   padding: 0.5em 2em;
   text-decoration: none;
   text-align: center;
   transition: all 0.5s;
 }
 .u-contactanos:hover {
-  background-color: #d02400;
+  background-color: #d70202;
   color: #ecf0f1;
+}
+.u-contactanosR {
+  background-color: #000831;
+  border: 5px solid #ecf0f1;
+  color: #ecf0f1;
+}
+.u-contactanosR:hover {
+  background-color: #d70202;
+  border: 5px solid #d70202;
+  border-bottom: 5px solid #a01c00;
 }
 .u-content,
 .u-image {
-  flex: 0 1 50%;
+  flex: 0 1 48%;
+}
+.u-content {
+  margin-right: 4%;
+}
+.u-content ul {
+  padding: 0;
+}
+.u-content li {
+  color: #ecf0f1;
+  font-size: 1.2em;
+  font-weight: 600;
+  list-style: none;
+  padding: 0.2em 0;
+  text-transform: uppercase;
+}
+.u-content li:before {
+  content: "\e601   ";
+  color: #11fe6f;
+  font-family: "compor";
+  font-size: 1em;
 }
 .u-flexbox {
   display: flex;
   flex-flow: row wrap;
+  margin: 0 auto;
   padding-bottom: 2em;
   width: 100%;
 }
 .u-red {
-  background-color: #d02400;
+  background-color: #d70202;
+  border-radius: 0.3em 0 0 0.3em;
   color: #ecf0f1;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
+  padding: 0.1em 0.3em 0.1em 0.3em;
 }
 .u-subtitleW {
   color: #ecf0f1;
 }
 .u-subtitleR {
-  color: #d02400;
+  color: #d70202;
 }
 .u-text {
   font-size: 1.1em;
   color: #95a5a6;
 }
-.u-textB {
+.u-textBig {
+  color: #ecf0f1;
   font-size: 2em;
 }
 .u-textW {
@@ -314,7 +387,7 @@ video {
 }
 .u-title {
   font-size: 2.5em;
-  font-weight: 300;
+  font-weight: 600;
 }
 .u-title:after {
   content: "";
@@ -322,23 +395,27 @@ video {
   margin: 10px 0;
   width: 100px;
   height: 5px;
-  background-color: #d02400;
+  background-color: #d70202;
 }
 .u-titleW {
   color: #ecf0f1;
 }
 .u-titleW:after {
   content: "";
-  display: block;
-  margin: 10px 0;
-  width: 100px;
-  height: 5px;
-  background-color: #212121;
+  background-color: #191818;
+}
+.u-titlelineW:after {
+  content: "";
+  background-color: #ecf0f1;
 }
 .u-button,
 .u-title,
 .u-subtitle {
   text-transform: uppercase;
+}
+.Ourteam {
+  background-color: #ca1f1b;
+  padding: 0.1em;
 }
 .prueba {
   background-color: #d02400;
@@ -350,7 +427,7 @@ video {
   =              SERVICES                       =    
   ===============================================*/
 .Services {
-  color: #212121;
+  color: #191818;
   padding: 0.5em;
 }
 /*===============================================
@@ -367,7 +444,7 @@ video {
   padding-top: 0.5em;
 }
 .Products-landing {
-  background-color: #e25041;
+  background-color: #e53935;
   padding: 0.1em;
 }
 .w {

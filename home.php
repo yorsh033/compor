@@ -14,15 +14,18 @@
 <!-- QUIENES SOMOS -->
 <section class="Ourteam">
 	<div class="u-container">
-		<h2 class="u-title">Quienes Somos</h2>
+		<h2 class="u-title u-titlelineW">Quienes Somos</h2>
 		<div class="u-flexbox">
 			<div class="u-content">
-				<p class="u-text u-textB">
+				<p class="u-text u-textBig">
 			Somos un grupo de jovenes profesionales con muchas ganas de llevar soluciones profesionales a las necesidades de nuestros Clientes.
 				</p>
-				<p class="u-text u-textB">
+				<p class="u-text u-textBig">
 Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brindandoles soluciones tecnológicas.
 				</p>
+			</div>
+			<div class="u-image">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ourteam.png" alt=""/>
 			</div>
 		</div>
 	</div>	
@@ -83,9 +86,9 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptatum quia maiores harum perspiciatis ab modi quos, quis maxime repellendus totam unde dolores, optio! Adipisci facere dicta corporis incidunt asperiores.
 				</p>
 				<ul>
-					<li>Loew</li>
-					<li>sfs</li>
-					<li>dsf</li>
+					<li>Control de entradas/salidas de empleados</li>
+					<li>Fácil manejo de Reportes</li>
+					<li>Efectivo registro de horas trabajadas</li>
 					<li>gs</li>
 					<li>sf</li>
 				</ul>
@@ -93,6 +96,7 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 			<div class="u-image">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/control-asistencia.png" alt=""/>
 			</div>
+			<a href="#" class="u-contactanos u-contactanosR">Preguntanos</a>
 		</div>
 		
 

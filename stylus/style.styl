@@ -28,6 +28,7 @@ Author URL:http://twitter.com/yorsh033
   ===============================================*/
 body 
 	font-size 16px
+	font-family 'Raleway', sans-serif
 	
 img
 video
@@ -36,10 +37,12 @@ video
 /*===============================================
   =                 COLORS                      =    
   ===============================================*/
-black = #212121
+black = #191818
 concrete = #95a5a6
-red = #D02400 
+red = #D70202
+redOscuro = #ca1f1b
 //red = #DE4F4F
+//red = #FE4444
 white = #ecf0f1
 
 /*===============================================
@@ -104,16 +107,26 @@ white = #ecf0f1
 .Footer
 	background-color #111111
 	color white
-	height 200px
 	padding .5em
 	text-align center
+	ul
+		padding 0
+	li	
+		list-style none
+	a
+		text-decoration none	
+		color concrete
+	&-socialMedia
+		li
+			display inline-block
+
 /*===============================================
   =                 HEADER                      =    
   ===============================================*/
   
 
 .Header
-	background-color rgba(0,0,0,.8)
+	background-color black
 	color white
 	padding .2em
 	position fixed
@@ -129,6 +142,11 @@ white = #ecf0f1
 			margin 0
 	
 	&__menu
+		.current-menu-item
+			a
+				background-color red
+				border-radius .3em
+			
 		width 50%
 		ul 
 			display flex
@@ -168,17 +186,17 @@ white = #ecf0f1
   ===============================================*/
 .Icon
 	background-color red
-	border 5px solid  #B32001
-	border-radius 50%
+	//border 5px solid  #BA011A
+	border-radius .1em 
 	color white
 	display block
 	font-family "compor"
 	font-size 4em
-	height 100px
-	line-height 100px
+	height 90px
+	line-height 90px
 	margin 0 auto
 	padding .3em
-	width 100px
+	width 90px
 	&-webDevelopment
 		&:before
 			content "\e994"
@@ -199,6 +217,34 @@ white = #ecf0f1
 	&-mobileApps
 		&:before
 			content "\e958"	
+
+	// SOCIAL MEDIA
+	&-facebook
+	&-twitter
+	&-skype
+		color white
+		font-size 2em
+		height 40px
+		line-height 40px
+		transition all .5s
+		width 40px
+	&-facebook
+	&-twitter
+	&-skype
+		&:hover
+			color black
+			background-color white			
+		
+		
+	&-facebook
+		&:before
+			content "\ea8c"
+	&-twitter
+		&:before
+			content "\ea91"
+	&-skype
+		&:before
+			content "\eac6"							
 					
 
 
@@ -217,7 +263,7 @@ white = #ecf0f1
 		padding-left .2em
 		padding-right .2em 
 	&-boxS
-		background-color #c0392b
+		background-color redOscuro
 			
 	&-button
 		color red
@@ -275,7 +321,7 @@ white = #ecf0f1
 		color red
 		font-size 1.2em
 		font-weight bold
-		margin 0  auto
+		margin .5em  auto
 		padding .5em 2em
 		text-decoration none
 		text-align center
@@ -283,21 +329,48 @@ white = #ecf0f1
 		&:hover
 			background-color red	
 			color white
+		&R
+			background-color #000831
+			border 5px solid white	
+			color white
+			&:hover
+				background-color red
+				border 5px solid red
+				border-bottom 5px solid #A01C00
+				 
 	&-content
 	&-image
-		flex 0 1 50%
+		flex 0 1 48%
 	
+	&-content
+		margin-right 4%
+		ul
+			padding 0
+		li
+			color white
+			font-size 1.2em
+			font-weight 600
+			list-style none
+			padding .2em 0
+			text-transform uppercase
+			&:before
+				content "\e601   "
+				color #11FE6F
+				font-family "compor"
+				font-size 1em
+					
 
 	&-flexbox
 		display flex
 		flex-flow row wrap
+		margin 0 auto
 		padding-bottom 2em
-		width 100%		
+		width 100%	
 	&-red
 		background-color red
+		border-radius .3em 0 0 .3em
 		color white	
-		padding-left .2em
-		padding-right .2em 
+		padding .1em .3em .1em .3em  
 	&-subtitle
 		&W
 			color white	
@@ -306,15 +379,15 @@ white = #ecf0f1
 	&-text
 		font-size 1.1em
 		color concrete
-		&B
+		&Big
+			color white
 			font-size 2em 
 		&W
 			color white
 			
-		
 	&-title
 		font-size 2.5em 
-		font-weight 300
+		font-weight 600
 		&:after
 			content ""
 			display block
@@ -326,18 +399,21 @@ white = #ecf0f1
 			color white
 			&:after
 				content "" 
-				display block
-				margin 10px 0
-				width 100px 
-				height 5px
 				background-color black
+		&lineW
+			&:after
+				content ""
+				background-color white		
 				
-	//shared property
+	//shared property el apostador
 	&-button
 	&-title	
 	&-subtitle
 		text-transform uppercase
-
+.Ourteam
+	background-color redOscuro
+	padding .1em
+	
 .prueba
 	background-color #D02400
 	height 700px	
@@ -367,7 +443,7 @@ white = #ecf0f1
 	padding-top .5em
 	
 	&-landing
-		background-color #E25041
+		background-color #E53935
 		padding .1em
 
 .w

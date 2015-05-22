@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory')?>/css/normalize.min.css"/>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>"/>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' />
 
         <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
