@@ -138,7 +138,7 @@ video {
   margin: 0;
 }
 .Header__menu {
-  width: 50%;
+  width: 75%;
 }
 .Header__menu .current-menu-item a {
   background-color: #d70202;
@@ -159,24 +159,8 @@ video {
 .Header__menu a:hover {
   background-color: rgba(0,0,0,0.5);
 }
-.Header__searcher {
-  color: #ecf0f1;
-  text-align: right;
-  width: 25%;
-}
-.Header__searcher input {
-  background-color: rgba(255,255,255,0.2);
-  border: none;
-  font-size: 0.9em;
-  padding: 0.2em;
-  text-transform: uppercase;
-}
-.Header__searcher input:focus {
-  border: none;
-}
 .Header__logo,
-.Header__menu,
-.Header__searcher {
+.Header__menu {
   display: inline-block;
   margin-right: -4px;
   vertical-align: middle;
@@ -284,6 +268,10 @@ video {
 }
 .u-col3 img {
   transition: transform 0.5s;
+}
+.u-col3 a {
+  color: #ecf0f1;
+  text-decoration: none;
 }
 .u-col3 a:hover img {
   transform: scale(1.1);
@@ -429,6 +417,16 @@ video {
 .Services {
   color: #191818;
   padding: 0.5em;
+}
+/*===============================================
+  =             MODULO SINGLE                   =    
+  ===============================================*/
+.Single {
+  padding: 0.5em;
+  padding-top: 6em;
+}
+.Single img {
+  max-height: 400px;
 }
 /*===============================================
   =             SLIDESHOW                    =    

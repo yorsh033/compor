@@ -20,7 +20,7 @@
 				</ul>	
 			</div>
 			<div class="u-col3  Footer-socialMedia">
-				<h3 class="u-subtitle">Social Media</h3>
+				<h3 class="u-subtitle">Nuestras Redes Sociales</h3>
 				<ul>
 					<li><a target="_blank" title="Nuestro Facebook" href="//www.facebook.com/ComporSolutions" class="Icon Icon-facebook"></a></li>
 					<li><a target="_blank" title="Siguenos en Twitter" href="" class="Icon Icon-twitter"></a></li>

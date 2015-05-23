@@ -12,7 +12,7 @@
 	<?php// wowslider(1); ?>
 </section>
 <!-- QUIENES SOMOS -->
-<section class="Ourteam">
+<section id="ourteam" class="Ourteam">
 	<div class="u-container">
 		<h2 class="u-title u-titlelineW">Quienes Somos</h2>
 		<div class="u-flexbox">
@@ -24,17 +24,17 @@
 Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brindandoles soluciones tecnológicas.
 				</p>
 			</div>
-			<div class="u-image">
+			<div class="u-image" data-move-x="100px" data>
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ourteam.png" alt=""/>
 			</div>
 		</div>
 	</div>	
 </section>
 <!-- SERVICES -->
-<section class="Services">
+<section id="services" class="Services">
 	<div class="u-container">
 		<h2 class="u-title">lo que hacemos</h2>
-		<div class="u-flexbox">
+		<div class="u-flexbox" id="services-container">
 			<article class="u-col3">
 				<span class="Icon Icon-webDevelopment"></span>
 				<h3 class="u-subtitle u-subtitleR">Diseño y Desarrollo Web</h3>
@@ -77,7 +77,7 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 </section>
 
 
-<section class="Products-landing">
+<section id="solutions" class="Products-landing">
 	<div class="u-container">
 		<h2 class="u-title u-titleW">Te ofrecemos soluciones</h2>
 		<div class="u-flexbox">
@@ -106,21 +106,32 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 <section class="u-boxS">
 	<div class="u-container">
 		<div class="u-flexbox ">
+			<?php while ( have_posts()) : the_post()?>	
 			<article class="u-col3">
-				<h3 class="u-subtitle u-subtitleW">Controles de Asistencia</h3>
-				<p class="u-text u-textW">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
-				<a class="u-button u-buttonW"href="#">Read More</a>
+					
+				<h3 class="u-subtitle u-subtitleW">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_title();?></h3>
+
+					</a>
+
+				<?php the_excerpt();?>
+			
+				<a class="u-button u-buttonW"href="<?php the_permalink();?>">leer mas</a>
+
+				
 			</article>
-			<article class="u-col3">
-				<h3 class="u-subtitle u-subtitleW">Controles de Acceso</h3>
-				<p class="u-text u-textW">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
-				<a class="u-button u-buttonW"href="#">Read More</a>
-			</article>
-			<article class="u-col3">
-				<h3 class="u-subtitle u-subtitleW">Desarrollo</h3>
-				<p class="u-text u-textW">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
-				<a class="u-button u-buttonW"href="#">Read More</a>
-			</article>
+			<?php endwhile; ?>
+<!-- 			<article class="u-col3">
+	<h3 class="u-subtitle u-subtitleW">Controles de Acceso</h3>
+	<p class="u-text u-textW">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
+	<a class="u-button u-buttonW"href="#">Read More</a>
+</article> -->
+<!-- 			<article class="u-col3">
+	<h3 class="u-subtitle u-subtitleW">Desarrollo</h3>
+	<p class="u-text u-textW">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
+	<a class="u-button u-buttonW"href="#">Read More</a>
+</article> -->
 			
 		</div>
 	</div>	
@@ -169,7 +180,7 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 </section> -->
 
 <!-- contact -->
-<section class="Contact">
+<section id="contact" class="Contact">
 	<div class="u-container">
 		<h2 class="u-title">Escribenos</h2>
 		<form action="#" class="u-flexbox">
