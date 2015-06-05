@@ -8,8 +8,28 @@
 
 <!-- !!! ACA IRIA EL SLIDER -->
 <section class="Slideshow">
-	<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/control-de-acceso4.jpg" alt=""/>
-	<?php// wowslider(1); ?>
+	<div class="swiper-container">
+        <div class="swiper-wrapper">
+        	<?php query_posts("category_name=slideshow&post_status=publish,future")?>
+        	<?php if (have_posts()): while (have_posts()) : the_post(); 
+        	?>
+
+            <div class="swiper-slide">
+				<!-- <img src="<?php //echo get_stylesheet_directory_uri(); ?>/img/control-de-acceso4.jpg" alt=""/>
+				 -->
+				<?php the_post_thumbnail("full");?>
+				<h2 class="Slideshow-title"><?php the_title();?></h2>
+				<div class="Slideshow-action"><?php the_content();?></div>
+			</div>
+
+			
+			<?php endwhile; else: endif;?>
+			<?php wp_reset_query();?>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
 </section>
 <!-- QUIENES SOMOS -->
 <section id="ourteam" class="Ourteam">
@@ -35,42 +55,33 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 	<div class="u-container">
 		<h2 class="u-title">lo que hacemos</h2>
 		<div class="u-flexbox" id="services-container">
+			<?php query_posts(array('category_name' =>'servicios'));?>
+ 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php $post_actual = $wp_query -> current_post; ?>
 			<article class="u-col3">
-				<span class="Icon Icon-webDevelopment"></span>
-				<h3 class="u-subtitle u-subtitleR">Diseño y Desarrollo Web</h3>
+				<a title="<?php the_title();?>" href="<?php the_permalink(); ?>">	
+					<span class="Icon Icon-webDevelopment"></span>
+				</a>
+				<h3 class="u-subtitle u-subtitleR">
+					<a class="u-subtitleR" href="<?php the_permalink();?>">
+						<?php the_title();?>
+					</a>
+				</h3>
 				<p class="u-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
-				<a class="u-button"href="#">Read More</a>
+				<a class="u-button"href="<?php the_permalink(); ?>">Read More</a>
 			</article>
-			<article class="u-col3">
-				<span class="Icon Icon-network"></span>
-				<h3 class="u-subtitle u-subtitleR">Configuración de Redes</h3>
-				<p class="u-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
-				<a class="u-button"href="#">Read More</a>
-			</article>
-			<article class="u-col3">
-				<span class="Icon Icon-graficDesign"></span>
-				<h3 class="u-subtitle u-subtitleR">Diseño Grafico</h3>
-				<p class="u-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
-				<a class="u-button"href="#">Read More</a>
-			</article>
-			<article class="u-col3">
-				<span class="Icon Icon-MarketingDigital"></span>
-				<h3 class="u-subtitle u-subtitleR">Marketing Digital</h3>
-				<p class="u-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
-				<a class="u-button"href="#">Read More</a>
-			</article>
-			<article class="u-col3">
-				<span class="Icon Icon-ComputerSistems"></span>
-				<h3 class="u-subtitle u-subtitleR">Sistemas Informaticos</h3>
-				<p class="u-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
-				<a class="u-button"href="#">Read More</a>
-			</article>
+			<!-- Si no hay post mostramos este mensaje -->
+ 					<?php endwhile; else: ?>
+					<?php _e('Lo sentimos no hay entradas .'); ?>
+				<!-- Cerramos el primer if -->
+ 					<?php endif; ?>
+			<!-- 
 			<article class="u-col3">
 				<span class="Icon Icon-mobileApps"></span>
 				<h3 class="u-subtitle u-subtitleR">Aplicaciones Moviles</h3>
 				<p class="u-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
 				<a class="u-button"href="#">Read More</a>
-			</article>
+			</article> -->
 			<a class="u-contactanos" href="#">Contáctanos</a>
 		</div>
 	</div>
@@ -106,14 +117,19 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 <section class="u-boxS">
 	<div class="u-container">
 		<div class="u-flexbox ">
-			<?php while ( have_posts()) : the_post()?>	
+			<?php query_posts(array('category_name' =>'productos'));?>
+ 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php $post_actual = $wp_query -> current_post; ?>
+
+			<?php //while ( have_posts()) : the_post()?>	
 			<article class="u-col3">
 					
 				<h3 class="u-subtitle u-subtitleW">
-					<a href="<?php the_permalink(); ?>">
-						<?php the_title();?></h3>
-
+					<a class="u-subtitleW" href="<?php the_permalink(); ?>">
+						<?php the_title();?>
 					</a>
+				</h3>
+				
 
 				<?php the_excerpt();?>
 			
@@ -121,14 +137,13 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 
 				
 			</article>
-			<?php endwhile; ?>
+			<!-- Si no hay post mostramos este mensaje -->
+ 					<?php endwhile; else: ?>
+					<?php _e('Lo sentimos no hay entradas .'); ?>
+				<!-- Cerramos el primer if -->
+ 					<?php endif; ?>
 <!-- 			<article class="u-col3">
 	<h3 class="u-subtitle u-subtitleW">Controles de Acceso</h3>
-	<p class="u-text u-textW">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
-	<a class="u-button u-buttonW"href="#">Read More</a>
-</article> -->
-<!-- 			<article class="u-col3">
-	<h3 class="u-subtitle u-subtitleW">Desarrollo</h3>
 	<p class="u-text u-textW">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum labore aut, necessitatibus possimus eligendi. Molestiae dolore consectetur eveniet sit, doloremque, blanditiis cumque recusandae pariatur cum est tenetur, nemo, nostrum unde!</p>
 	<a class="u-button u-buttonW"href="#">Read More</a>
 </article> -->

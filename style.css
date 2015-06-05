@@ -120,7 +120,7 @@ video {
   =                 HEADER                      =    
   ===============================================*/
 .Header {
-  background-color: #191818;
+  background-color: rgba(0,0,0,0.6);
   color: #ecf0f1;
   padding: 0.2em;
   position: fixed;
@@ -141,8 +141,8 @@ video {
   width: 75%;
 }
 .Header__menu .current-menu-item a {
-  background-color: #d70202;
-  border-radius: 0.3em;
+  color: #ecf0f1;
+  border-bottom: 1px solid #d70202;
 }
 .Header__menu ul {
   display: flex;
@@ -152,12 +152,14 @@ video {
 .Header__menu a {
   color: #ecf0f1;
   font-size: 0.9em;
-  padding: 1em;
+  margin: 0.5em;
+  padding-bottom: 0.3em;
   text-decoration: none;
   transition: all 0.5s;
 }
 .Header__menu a:hover {
-  background-color: rgba(0,0,0,0.5);
+  color: #ecf0f1;
+  border-bottom: 1px solid #d70202;
 }
 .Header__logo,
 .Header__menu {
@@ -270,7 +272,6 @@ video {
   transition: transform 0.5s;
 }
 .u-col3 a {
-  color: #ecf0f1;
   text-decoration: none;
 }
 .u-col3 a:hover img {
@@ -321,6 +322,7 @@ video {
 }
 .u-content,
 .u-image {
+  -moz-flex: 0 1 48%;
   flex: 0 1 48%;
 }
 .u-content {
@@ -426,7 +428,10 @@ video {
   padding-top: 6em;
 }
 .Single img {
-  max-height: 400px;
+  max-height: 350px;
+}
+.Single li {
+  color: #191818;
 }
 /*===============================================
   =             SLIDESHOW                    =    
@@ -434,6 +439,21 @@ video {
 .Slideshow {
   height: 680px;
   overflow: hidden;
+  position: relative;
+}
+.Slideshow-title,
+.Slideshow-action {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  z-index: 5;
+  color: #d70202;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.Slideshow-action {
+  font-size: 1em;
+  color: #ecf0f1;
 }
 /*===============================================
   =              SERVICES                       =    
@@ -447,4 +467,58 @@ video {
 }
 .w {
   position: relative;
+}
+/*===============================================
+  =            RESPONSIVE WEB DESIGN            =    
+  ===============================================*/
+@media screen and (max-width: 64em) {
+  .Slideshow {
+    height: auto;
+  }
+  .u-container {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 48em) {
+  .Contact-email,
+  .Contact-message,
+  .Contact-name,
+  .Contact-send,
+  .Contact-subject {
+    display: block;
+    width: 100%;
+  }
+  .Header__menu ul {
+    display: block;
+  }
+  .u-button {
+    border: 1px solid #d70202;
+    border-radius: 0.5em 0 0 0.5em;
+    font-weight: bold;
+    padding: 0.5em 0.7em;
+    transition: all 0.5s;
+  }
+  .u-button:hover {
+    background-color: #d70202;
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+  .u-buttonW {
+    border: 1px solid #ecf0f1;
+  }
+  .u-buttonW:hover {
+    background-color: #ecf0f1;
+    color: #d70202;
+  }
+  .u-contactanos {
+    display: block;
+    margin-bottom: 2em;
+    width: 50%;
+  }
+  .u-flexbox {
+    display: block;
+  }
+  .u-text {
+    text-align: justify;
+  }
 }

@@ -13,9 +13,10 @@
 			<!-- <span class="u-category"><?php the_category();?></span> -->
 			<?php endwhile?>
 			<?php endif;?>
+			<a href="#" class="u-contactanos u-contactanosR">Preguntanos</a>
 		</div>
 			<!-- end flexbox -->
-
+		
 	</div>
 </div>
 <?php get_footer();?>
