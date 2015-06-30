@@ -9,13 +9,12 @@
         bloginfo('name'); echo " - "; bloginfo('description');
     }
     ?>" />
-        <meta name="title" content="<?php wp_title();?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory')?>/css/normalize.min.css"/>
+        <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory')?>/css/slicknav.css"/>
         <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory')?>/css/swiper.min.css"/> 
-        <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory')?>/css/slicknav.css"/> 
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url')?>"/>
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' />
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' /> 
 
         <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
@@ -55,50 +54,16 @@
     .swiper-slide img{
         height: auto;
     }
-
-/**/
-    .swiper-container2 {
-        width: 100%;
-        height: 300px;
-        margin: 20px auto;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-
-
-
     </style>
 
-        <!--
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-smoove/0.2.7/jquery.smoove.min.js"></script> -->
-        <!--<script src="<?php //echo get_stylesheet_directory_uri();?>/js/main.js"></script>
 
-        <script src="<?php //echo get_stylesheet_directory_uri();?>/js/jquery.localScroll.min.js"></script>
-        <script src="<?php //echo get_stylesheet_directory_uri();?>/js/jquery.scrollTo.min.js"></script>-->
-       <!-- <script src="<?php //echo get_stylesheet_directory_uri();?>/js/vendor/jquery.js"></script> -->
+
         
     <?php wp_head(); ?>    
     </head>
     <body>
         <header class="Header">
-            <div class="u-container u-noOverflow">
+            <div class="u-container">
                 <div class="Header__logo">
                     <a href="<?php echo get_settings('home'); ?>" title="<?php bloginfo('name');?>">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="Bienvenid@s a Compor Solutions" width="60"/>
@@ -107,11 +72,18 @@
                         </h1>
                     </a>
                 </div>
+
+<!--                 <ul id="navToggle" class="burger slide"> 
+    <li></li>
+    <li></li>
+    <li></li>
+</ul> -->
                 <nav class="Header__menu slide">
+                    <?php //wp_nav_menu(array('menu-secundario'=>'Second Nav'));?>
                     <?php wp_nav_menu(
                         array(
                             "container" => false,
-                            "theme_location" => "menu"
+                            "theme_location" => "menu-secundario"
                         ));
                     ?>
                 </nav>
@@ -119,6 +91,6 @@
                     <input type="search" placeholder="Search"/>
 
                 </div> -->
-            </div>
-            <div class="Header--menumobile"></div>
+            </div>  
+             <div class="Header--menumobile"></div>  
         </header>
