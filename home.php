@@ -6,7 +6,7 @@
 <?php get_header();?>
 
 
-<!-- !!! ACA IRIA EL SLIDER -->
+<!-- SLIDER -->
 <section class="Slideshow">
 	<div class="swiper-container">
         <div class="swiper-wrapper">
@@ -84,7 +84,7 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 	</div>		
 </section>		
 
-<!-- llamando services -->
+<!--  services -->
 		<?php
 			include (TEMPLATEPATH."/soluciones.php");
 		?>	
@@ -99,16 +99,18 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 			</div> -->
 		<div class="swiper-container2">
 	        <div class="swiper-wrapper">
-	            <div class="swiper-slide">Slide 1</div>
-	            <div class="swiper-slide">Slide 2</div>
-	            <div class="swiper-slide">Slide 3</div>
-	            <div class="swiper-slide">Slide 4</div>
-	            <div class="swiper-slide">Slide 5</div>
-	            <div class="swiper-slide">Slide 6</div>
-	            <div class="swiper-slide">Slide 7</div>
-	            <div class="swiper-slide">Slide 8</div>
-	            <div class="swiper-slide">Slide 9</div>
-	            <div class="swiper-slide">Slide 10</div>
+	            <?php query_posts("category_name=clientes&post_status=publish,future")?>
+        	<?php if (have_posts()): while (have_posts()) : the_post(); 
+        	?>
+
+            <div class="swiper-slide">
+				
+				<h2 class="Slideshow-title"><?php the_title();?></h2>
+			</div>
+
+			
+			<?php endwhile; else: endif;?>
+			<?php wp_reset_query();?>
 	        </div>
 	        <!-- Add Pagination -->
 	        <div class="swiper-pagination2"></div>
@@ -120,26 +122,5 @@ Nuestra mayor virtud es la de servir a los demás y que mejor que hacerlo brinda
 	</div>
 </section>
 
-<!-- contact -->
-<!-- <section id="contact" class="Contact">
-	<div class="u-container">
-		<h2 class="Contact-title u-title">Escribenos</h2>
-		<h2 class="u-subtitle Contact-suscessfully">Gracias por tu mensaje!</h2>
-		<form action="#" class="u-flexbox" id="form-contact">
-			<div></div>
-			<input type="text" class="Contact-name" placeholder="Name" required="true"/>
 
-			<input type="email" class="Contact-email"placeholder="Email" required="true"/>
-
-			<input type="text" class="Contact-subject" placeholder="Subject" required="true"/>
-			<textarea class="Contact-message" name="" id="" cols="10" rows="5" placeholder="Message" required="true"></textarea>
-			<a class="Contact-send u-contactanos" name="form-contact-btn" id="form-contact-btn" value="Enviar Mensaje">Enviar Mensaje</a>
-
-		</form>
-		<?php
-			//include (TEMPLATEPATH."/contacto.php");
-		?>	
-	</div>
-</section>
- -->
 <?php get_footer();?>

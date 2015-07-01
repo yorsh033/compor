@@ -58,7 +58,7 @@ white = #F7F8F9
 	
 	&:after
 		font-family "compor"
-		content "\e604"
+		content "\e906"
 		font-size 6em
 		position absolute
 		right 10%
@@ -294,6 +294,13 @@ white = #F7F8F9
 	&-mobileApps
 		&:before
 			content "\e958"	
+	&-Notfound
+		font-family "compor"
+		font-size 6em
+		color red
+		margin-bottom .5em
+		&:before
+			content "\e9e5"
 
 	// SOCIAL MEDIA
 	&-facebook
@@ -442,7 +449,7 @@ white = #F7F8F9
 			padding .2em 0
 			text-transform uppercase
 			&:before
-				content "\e601   "
+				content "\ea10  "
 				color #11FE6F
 				font-family "compor"
 				font-size 1em
@@ -455,7 +462,14 @@ white = #F7F8F9
 		padding-bottom 2em
 		width 100%	
 	&-noOverflow
-		overflow visible		
+		overflow visible
+	
+	&-notfound			
+		margin-bottom 2em
+		text-align center
+		&Text
+			font-size 2em
+
 	&-red
 		background-color red
 		border-radius .3em 0 0 .3em

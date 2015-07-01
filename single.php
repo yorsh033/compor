@@ -17,9 +17,10 @@
 			<?php endwhile?>
 			<?php endif;?>
 
+		<a href="//localhost:8080/compor/contacto/" class="u-contactanos u-contactanosR">Contactanos</a>	
 		</div>
+
 			<!-- end flexbox -->
-		
 	</div>
 </div>
 <?php get_footer();?>

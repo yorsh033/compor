@@ -40,7 +40,7 @@ video {
 }
 .Contact:after {
   font-family: "compor";
-  content: "\e604";
+  content: "\e906";
   font-size: 6em;
   position: absolute;
   right: 10%;
@@ -275,6 +275,15 @@ video {
 .Icon-mobileApps:before {
   content: "\e958";
 }
+.Icon-Notfound {
+  font-family: "compor";
+  font-size: 6em;
+  color: #d70202;
+  margin-bottom: 0.5em;
+}
+.Icon-Notfound:before {
+  content: "\e9e5";
+}
 .Icon-facebook,
 .Icon-twitter,
 .Icon-skype {
@@ -420,7 +429,7 @@ video {
   text-transform: uppercase;
 }
 .u-content li:before {
-  content: "\e601   ";
+  content: "\ea10  ";
   color: #11fe6f;
   font-family: "compor";
   font-size: 1em;
@@ -434,6 +443,13 @@ video {
 }
 .u-noOverflow {
   overflow: visible;
+}
+.u-notfound {
+  margin-bottom: 2em;
+  text-align: center;
+}
+.u-notfoundText {
+  font-size: 2em;
 }
 .u-red {
   background-color: #d70202;
